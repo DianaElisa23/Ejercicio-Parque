@@ -4,15 +4,15 @@ public class BilleteraParque {
 
     
 
-    public void BilleteraParque(){
+    public BilleteraParque(){
         tickets = 0;
     }
 
     public BilleteraParque(int tickets) {
         if(tickets >= 0){
-            tickets = tickets;
+            this.tickets = tickets;
         }else{
-            tickets = 0;
+            this.tickets = 0;
         }
     }
 
@@ -21,9 +21,11 @@ public class BilleteraParque {
     }
 
     public void setTickets(int tickets) {
-        this.tickets = tickets;
+        if(tickets >= 0){
+            this.tickets = tickets;
+        }
+        
     }
-
     public static boolean getFestivo() {
         return festivo;
     }
